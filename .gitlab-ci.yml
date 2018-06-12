@@ -1,0 +1,10 @@
+image: node:latest
+
+before_script:
+  - npm install
+
+publish:
+  stage: deploy
+  script:
+    - npm run build
+    - npm publish
